@@ -69,7 +69,7 @@ const LandingPage = () => {
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
             {/* Mobile Image */}
-            <div className="mb-4 block sm:hidden w-full flex justify-center overflow-hidden">
+            <div className="mb-4 block sm:hidden w-full  justify-center overflow-hidden">
               <Image
                 alt="Woman Lawyer"
                 width={750}
@@ -380,7 +380,7 @@ const LandingPage = () => {
               <div className="bg-white border-2 border-black rounded-lg p-6 transition-transform duration-300 hover:scale-105 cursor-pointer shadow-lg hover:shadow-xl w-full h-full">
                 <div className="flex items-center mb-4">
                   <Image
-                    src={t.image} // now it's valid
+                    src={t.image.one}
                     alt={t.name}
                     width={48}
                     height={48}
