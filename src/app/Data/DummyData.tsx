@@ -106,6 +106,7 @@ export const steps = [
 
 export const whyChooseUsData = [
   {
+    id: 1,
     title: "Affordable Legal Solutions",
     description:
       "Access premium legal services without stretching your budget.",
@@ -117,6 +118,7 @@ export const whyChooseUsData = [
     ],
   },
   {
+    id: 2,
     title: "Expert and Personalized Support",
     description:
       "Unmatched service from seasoned legal professionals tailored to your needs.",
@@ -128,6 +130,7 @@ export const whyChooseUsData = [
     ],
   },
   {
+    id: 3,
     title: "Always Here for Your Problems",
     description:
       "Count on Medence for round-the-clock assistance and guidance.",

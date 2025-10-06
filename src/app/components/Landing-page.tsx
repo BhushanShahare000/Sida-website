@@ -19,7 +19,7 @@ const LandingPage = () => {
   const carouselRef = useRef(null);
   const [openIndex, setOpenIndex] = useState(null);
 
-  const scrollTo = (direction) => {
+  const scrollTo = (direction: any) => {
     const container = carouselRef.current;
     if (!container) return;
 
@@ -32,7 +32,7 @@ const LandingPage = () => {
     });
   };
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index: any) => {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
