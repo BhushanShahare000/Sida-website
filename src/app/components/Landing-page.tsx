@@ -16,14 +16,14 @@ import { faqs } from "../Data/DummyData";
 import Link from "next/link";
 
 const LandingPage = () => {
-  const carouselRef = useRef(null);
+  const carouselRef = useRef<HTMLDivElement | null>(null);
+
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const scrollTo = (direction: "left" | "right") => {
     const container = carouselRef.current;
     if (!container) return;
 
-    // ✅ Ensure firstChild is an HTMLElement before using offsetWidth
     const firstChild = container.firstElementChild as HTMLElement | null;
     if (!firstChild) return;
 
