@@ -19,11 +19,15 @@ const LandingPage = () => {
   const carouselRef = useRef(null);
   const [openIndex, setOpenIndex] = useState(null);
 
-  const scrollTo = (direction: any) => {
+  const scrollTo = (direction: "left" | "right") => {
     const container = carouselRef.current;
     if (!container) return;
 
-    const cardWidth = container.firstChild.offsetWidth + 32; // card width + gap
+    // ✅ Ensure firstChild is an HTMLElement before using offsetWidth
+    const firstChild = container.firstElementChild as HTMLElement | null;
+    if (!firstChild) return;
+
+    const cardWidth = firstChild.offsetWidth + 32; // card width + gap
     const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
 
     container.scrollBy({
