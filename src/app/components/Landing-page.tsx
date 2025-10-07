@@ -17,7 +17,7 @@ import Link from "next/link";
 
 const LandingPage = () => {
   const carouselRef = useRef(null);
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const scrollTo = (direction: "left" | "right") => {
     const container = carouselRef.current;
@@ -36,9 +36,10 @@ const LandingPage = () => {
     });
   };
 
-  const toggleFAQ = (index: any) => {
+  const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
   return (
     <div className="w-full  overflow-hidden">
       <main className="min-h-[calc(100vh-100px)] bg-white z-4 relative flex items-center justify-between px-4 sm:px-12 py-12 sm:py-0 max-w-full">
@@ -384,7 +385,7 @@ const LandingPage = () => {
               <div className="bg-white border-2 border-black rounded-lg p-6 transition-transform duration-300 hover:scale-105 cursor-pointer shadow-lg hover:shadow-xl w-full h-full">
                 <div className="flex items-center mb-4">
                   <Image
-                    src={t.image.one}
+                    src={t.image.one!}
                     alt={t.name}
                     width={48}
                     height={48}
